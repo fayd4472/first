@@ -1,0 +1,49 @@
+.icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(var(--bs-primary-rgb));
+            color: rgb(var(--bs-primary-rgb));
+        }
+        nav{
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            align-items: start;
+            @media screen and (max-width:768px) {
+               position: fixed;
+               z-index: 1000;
+               flex-direction: column;
+               top: 40px;
+               width: 90%;
+               background: #010101b8;
+                height: 80vh;
+               border-radius: 8px;
+                transition: 2s;
+                align-items: flex-start;
+                left: 5%;
+                transform: translate(200)
+                
+            }
+        }
+
+        .item:hover .icon {
+            background: rgb(var(--bs-primary-rgb));
+            color: aliceblue;
+        }
+        .to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+          transform: scale(0);
+          transition: 0.5s;
+        }
+        #navbtn{
+            display: none;
+            @media screen and (max-width:768px) {
+                display: block;
+            }
+        }
